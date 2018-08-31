@@ -6,6 +6,8 @@ node {
         sh 'oc delete all --selector app=test-app'
       }
       stage('**********BUILD AND PUBLISH ON OPENSHIFT**********'){
+        sh 'pwd'
+        sh 'ls'
         sh 'oc new-app . --strategy=docker --name=test-app'
       }
       

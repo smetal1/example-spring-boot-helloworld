@@ -1,5 +1,5 @@
 #!groovy
-
+node {
   currentBuild.result = "SUCCESS"
   try {
       stage('**********REMOVE PREVIOUS BUILD**********'){
@@ -18,3 +18,4 @@
   throw err
   }
 
+}

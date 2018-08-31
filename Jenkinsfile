@@ -9,7 +9,7 @@ node {
         sh 'pwd'
         sh 'cd /var/lib/jenkins/jobs'
         sh 'ls'
-        sh 'oc new-app . --strategy=docker --name=test-app'
+        sh 'oc new-app https://github.com/smetal1/example-spring-boot-helloworld.git --strategy=docker --name=test-app'
       }
       
       stage('********** EXPOSE SERVICES ON OPENSHIFT**********'){

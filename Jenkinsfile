@@ -7,7 +7,7 @@ node {
       }
       stage('**********BUILD AND PUBLISH ON OPENSHIFT**********'){
         sh 'pwd'
-        sh 'cd ..'
+        sh 'cd /var/lib/jenkins/jobs'
         sh 'ls'
         sh 'oc new-app . --strategy=docker --name=test-app'
       }

@@ -6,6 +6,7 @@ node {
      git credentialsId: 'b8b10002-47b7-43c6-b7bb-7515d01993eb', url: 'https://github.com/smetal1/example-spring-boot-helloworld.git' 
     }
     stage ('blue-green deployment'){
+      sh 'chmod +x deployment.sh'
      sh './deployment.sh' 
     }
       

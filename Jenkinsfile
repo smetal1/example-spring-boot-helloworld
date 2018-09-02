@@ -6,11 +6,8 @@ node {
         sh 'oc delete all --selector app=test-app'
       }
       
-      }
       
-      stage('********** EXPOSE SERVICES ON OPENSHIFT**********'){
-     
-      }
+      
   }
   catch(err){
   currentBuild.result = "FAILURE"

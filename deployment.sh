@@ -1,6 +1,6 @@
 oc patch route/bluegreen-test-app -p '{"spec":{"to":{"name":"test-app-blue"}}}'
 sleep 60s
-oc delete all --selector app=test-app-green
+oc delete services app=test-app-green
 oc new-app . --strategy=docker --name=test-app-green
 sleep 60s
 oc patch route/bluegreen-test-app -p '{"spec":{"to":{"name":"test-app-green"}}}'
